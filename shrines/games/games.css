@@ -1,0 +1,88 @@
+@font-face {
+  font-family: pkmn;
+  src: url('../../images/assets/fonts/pkmn.ttf');
+}
+
+body {
+ background-image: url("../../images/bgs/sandish.png");
+ max-width:800px;
+ text-align:center;
+ margin: 0 auto;
+ font-family: 'pkmn', sans-serif;
+}
+
+  * {
+   box-sizing: border-box;
+  }
+  
+#container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#header {
+  width: 100%;
+  background-color: #5e4e8c;
+                /* header color here! */
+  height: 150px;
+ /* this is only for a background image! */
+ /* if you want to put images IN the header, 
+you can add them directly to the <div id="header"></div> element! */
+ /* background-image: var(--header-image); */
+  background-size: 100%;
+  margin:0 auto;
+}
+
+#flex {
+  display: flex;
+}
+
+aside {
+  background-color: rgba(0,0,0,.5);
+  width: 140px;
+  font-size: smaller;
+  border:3px solid silver;
+  text-align:center;
+  /* this makes the sidebar text slightly smaller */
+}
+
+main {
+  background-color: rgba(0,0,0,.5);
+  flex: 1;
+  padding: 20px;
+  order: 2;
+}
+
+*/ #leftSidebar {
+   order: 1;
+}
+
+#rightSidebar {
+  order: 3;
+            
+}
+
+@media only screen and (max-width: 800px) {
+  #flex {
+    flex-wrap: wrap;
+  }
+
+  aside {
+    width: 100%;
+  }
+
+                /* the order of the items is adjusted here for responsiveness!
+      since the sidebars would be too small on a mobile device.
+      feel free to play around with the order!
+      */
+  main {
+    order: 1;
+  }
+
+  #leftSidebar {
+    order: 2;
+  }
+
+  #rightSidebar {
+    order: 3;
+  }
